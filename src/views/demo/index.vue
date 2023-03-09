@@ -1,3 +1,11 @@
+<!--
+ * @Descripttion: 
+ * @version: 18.1.2
+ * @Author: Harleens
+ * @Date: 2023-03-04 13:41:47
+ * @LastEditors: Harleens
+ * @LastEditTime: 2023-03-08 21:31:23
+-->
 <script setup lang="ts">
   import { useStatisDeviceByUserObject } from '/@/hooks/useStatisDeviceByUserObject';
   // // 设备分类统计
@@ -25,6 +33,7 @@
     { num: 170, unit: '百万', text: '合并拉去请求', bg: 'bg-3' },
   ]);
 </script>
+
 <template>
   <Header />
   <section class="container max-w-screen-xl px-6 mx-auto 2xl:px-0">

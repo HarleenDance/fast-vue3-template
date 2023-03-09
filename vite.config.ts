@@ -1,8 +1,18 @@
+/*
+ * @Descripttion:
+ * @version: 18.1.2
+ * @Author: Harleens
+ * @Date: 2023-03-04 13:41:47
+ * @LastEditors: Harleens
+ * @LastEditTime: 2023-03-09 19:10:17
+ */
 import { UserConfig, ConfigEnv } from 'vite';
 import { createVitePlugins } from './build/vite/plugins';
 import { resolve } from 'path';
 import proxy from './build/vite/proxy';
 import { VITE_PORT } from './build/constant';
+
+import path from 'path';
 
 function pathResolve(dir: string) {
   return resolve(process.cwd(), '.', dir);
@@ -52,6 +62,23 @@ export default ({ command }: ConfigEnv): UserConfig => {
       cors: false, // 类型： boolean | CorsOptions 为开发服务器配置 CORS。默认启用并允许任何源
       host: '0.0.0.0', // IP配置，支持从IP启动
       proxy,
+    },
+
+    // build
+    build: {
+      lib: {
+        entry: path.resolve(__dirname, 'src/export.ts'),
+        name: 'element-plus-form-designer',
+        fileName: (format) => `build.${format}.js`,
+      },
+      rollupOptions: {
+        external: ['vue'],
+        output: {
+          globals: {
+            vue: 'Vue',
+          },
+        },
+      },
     },
   };
 };
