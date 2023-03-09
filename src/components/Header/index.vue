@@ -30,10 +30,15 @@
       <div class="mx-auto max-w-8xl">
         <div class="px-4 py-4 border-b border-slate-900/10 lg:px-8 lg:border-0 dark:border-slate-300/10">
           <div class="relative flex items-center text-2xl sm:text-2xl font-blimone">
-            <router-link to="/" class="mr-3 flex-none w-[2.0625rem] md:w-auto leading-6 dark:text-slate-200">Fast-Vue3</router-link>
+            <router-link to="/" class="mr-3 flex-none w-[2.0625rem] md:w-auto leading-6 dark:text-slate-200"
+              >Fast-Vue3-Template</router-link
+            >
             <div class="relative items-center hidden ml-auto lg:flex">
               <nav class="text-sm font-semibold leading-6 text-slate-700 dark:text-slate-200">
                 <ul class="flex space-x-8 tag">
+                  <li>
+                    <router-link to="/Form-designer-demo" class="hover:text-sky-500 dark:hover:text-sky-400">FormDesignerDemo</router-link>
+                  </li>
                   <li>
                     <router-link to="/Component-demo" class="hover:text-sky-500 dark:hover:text-sky-400">ComponentDemo</router-link>
                   </li>

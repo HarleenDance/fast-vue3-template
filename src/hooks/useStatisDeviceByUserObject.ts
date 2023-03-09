@@ -99,7 +99,7 @@ export const useStatisDeviceByUserObject = () => {
     // });
     // // setTimeout(() => {
     options.xAxis = { data: xData };
-    options.series.data = sData;
+    options.series[0].data = sData;
     console.log(options.series, '--------sData');
     console.log(options, '--------options');
     // }, 2000);

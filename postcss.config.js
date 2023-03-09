@@ -2,6 +2,7 @@ module.exports = {
   // 基于375px，一般项目设计稿是基于750px
   // const designWidth = file.dirname.includes(path.join('node_modules', 'vant')) ? 375 : 750;
   plugins: {
+    tailwindcss: {},
     autoprefixer: {},
     // "postcss-px-to-viewport": {
     //   unitToConvert: "px", // 需要转换的单位，默认为"px"
